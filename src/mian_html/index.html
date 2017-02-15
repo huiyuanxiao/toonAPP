@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+</head>
+<body>
+<div id="app">
+    <router-view></router-view>
+</div>
+</body>
+<script>
+    var serviceUrl = window.location.host.indexOf('8080') !== -1 ? 'http://' + window.location.host + '/dist/main.js' : '../../../dist/main.js';
+    var body = document.getElementsByTagName('body')[0];
+    var script = document.createElement('script');
+    script.src = serviceUrl;
+    body.appendChild(script);
+</script>
+</html>
